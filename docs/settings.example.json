@@ -1,0 +1,23 @@
+{
+  "Folder": "",
+  "Files": [],
+  "FrameSizing": "Auto-fit",
+  "ImageFitting": "Fit",
+  "Monitor": "",
+  "Width": 320,
+  "Margin": 24,
+  "Opacity": 0.9,
+  "IntervalSeconds": 15,
+  "Corner": "bottom-right",
+  "Crossfade": true,
+  "Topmost": true,
+  "ClickThrough": true,
+  "RememberPosition": true,
+  "ShowTray": true,
+  "Startup": false,
+  "Hotkey": "Ctrl+Alt+D",
+  "X": null,
+  "Y": null,
+  "AnchorX": null,
+  "AnchorY": null
+}

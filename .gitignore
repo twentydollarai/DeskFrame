@@ -1,0 +1,14 @@
+/build/
+/release/
+**/DeskFrameData/
+**/test-work/
+*.user
+*.suo
+*.pdb
+*.log
+*.tmp
+.vs/
+bin/
+obj/
+portable.flag
+settings.json

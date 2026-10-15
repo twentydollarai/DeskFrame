@@ -1,0 +1,101 @@
+DeskFrame 1.0.0 - a quiet desktop picture frame
+
+RUN
+Extract the ZIP. Keep DeskFrame.exe and DeskFrame.exe.config together, then
+double-click DeskFrame.exe. No administrator privileges or installer required.
+Choose a folder or multiple images, then click Save. Launch DeskFrame.exe again
+while it is running to open its control window. The notification-area icon is
+enabled by default and can be turned off in Settings.
+
+CONTROLS
+Ctrl+Alt+D: show/hide. Double-click the tray icon to open controls.
+Controls has Up, Down, Left and Right buttons to move the frame by 20 pixels.
+These buttons work without global shortcuts. Remember position saves the moved
+location. Movement stays inside the selected monitor and is disabled while the
+frame is hidden or its pictures are unavailable.
+Ctrl+Alt+Shift+Arrow also moves by 20 pixels when available. If Windows rejects
+a shortcut, Controls opens with a warning naming the unavailable bindings.
+The control window has Show/Hide, Pause/Resume, Change Pictures, Settings and
+Exit DeskFrame. Closing the window leaves the frame running. Right-click the
+tray icon for the same actions. Hidden is still running. Use Exit to stop.
+Alternatively run: DeskFrame.exe --exit
+
+SETTINGS
+Choose images, sizing mode, fitting, monitor, maximum width, opacity, interval (default 15 seconds; 2 to
+3600 seconds), screen corner, margin, always-on-top, click-through, crossfade,
+saved position, notification-area icon, Windows startup and global shortcut.
+Preferences are saved automatically under %LOCALAPPDATA%\DeskFrame.
+Changing width/corner/margin/monitor resets position. The frame stays within
+the selected monitor work area; a missing monitor falls back to the primary.
+The frame does not take focus even when click-through is disabled.
+Cancel without readable pictures opens Controls with Change Pictures and Exit.
+Saving with the tray icon off also opens Controls. Reopen DeskFrame.exe anytime.
+
+DISPLAY MODES
+Auto-fit (default): show the complete picture without added outer padding.
+The frame follows its proportions, bounded by maximum width and monitor height.
+Crossfade through a smoothly changing frame in about 440 ms; the selected corner
+stays anchored. Temporary proportional cropping avoids padding while the size
+changes; the incoming picture settles to its complete fitted bounds.
+Fixed frame / Fit: show the complete picture on a stable canvas, using a light
+matte where proportions differ. Fixed frame / Fill: centered proportional crop
+fills the canvas. Both fixed modes crossfade whole canvases. No mode stretches.
+Auto-fit fades last about 440 ms; fixed-frame fades last 1.5 seconds. Disable Fade for immediate changes. Transparent
+pixels blend onto a light matte; embedded image borders are never auto-cropped.
+Existing settings migrate to Auto-fit while retaining the other preferences.
+Save and Cancel remain visible while the Settings controls scroll.
+PORTABLE
+Double-click Start portable.cmd. Preferences will be stored in DeskFrameData
+beside the executable. That folder must be writable. Exit the normal instance
+before switching modes. After exiting, use Start portable.cmd again to keep the
+same portable settings. Opening DeskFrame.exe directly uses the normal profile
+unless portable.flag exists beside it. Picture locations are absolute paths; choose them again
+if a drive letter changes. Portable mode does not automatically enable startup.
+
+SUPPORTED
+Verified scope: Windows 11 x64 with .NET Framework 4.8 or 4.8.1.
+Windows 10 1903+ is a compatibility target, not a verified platform.
+Windows on ARM and mixed-DPI multi-monitor use remain unverified.
+PNG, JPG, JPEG, BMP, and first frame of GIF. No WebP, HEIC, RAW or video.
+Folder selection is nonrecursive. Missing/corrupt pictures are skipped. An
+unavailable source hides the frame and retries every 10 seconds, even if paused.
+Controls explains the problem and offers Change Pictures. Reopen DeskFrame.exe
+for controls even with the tray icon off. Show/Hide resumes when pictures return.
+Local folders are recommended; offline network locations can delay file access.
+
+PRIVACY
+Pictures remain local. Nothing is uploaded. No accounts, telemetry, automatic
+updates or network services. Source images are read only and are not copied
+or modified. Preferences contain your local paths; do not share that file.
+
+STARTUP / UNINSTALL
+Start with Windows is opt-in in Settings and uses your account's Run entry.
+Actual sign-in startup remains unverified. Settings needs a readable source to
+save any change, including disabling startup; reselect readable pictures first.
+Disable startup before moving/deleting the application. Exit, then remove this folder.
+Optionally remove %LOCALAPPDATA%\DeskFrame or the portable DeskFrameData folder.
+No pictures are removed.
+
+LIMITATIONS
+Unsigned release: Windows may show a publisher/reputation warning. Verify where
+you downloaded it. No guarantee over secure/UAC or exclusive fullscreen windows.
+Auto-fit follows image bounds; Fixed Fit uses margins; Fixed Fill crops edges.
+Transparency and Fixed Fit space use a light matte tinted from image edges.
+Black borders already present in a source picture remain visible.
+Very large pictures take more decoding memory. No mouse drag mode; use the
+movement buttons in Controls or available movement shortcuts.
+
+LICENSE
+MIT; see LICENSE. Version history: CHANGELOG.md.
+
+
+
+REMAINING COVERAGE
+Clean-account installation, downloaded-file/SmartScreen behavior, screen-reader
+speech, monitor hot-plug, sleep/wake, overnight use and full multiple-image
+picker automation remain unverified. System DPI awareness is used, not
+per-monitor awareness. Large or offline sources can block synchronous UI work.
+Report issues through the public repository's Issues tab when available; include
+version, Windows architecture, scaling and reproduction steps. Redact paths and
+account names; do not attach preferences, personal images or desktop captures.
+See RELEASE_NOTES.md and THIRD_PARTY_NOTICES.md in this package.
